@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- go to remote website -->
+
+    <a href="https://www.amazon.in/">Go to Amazon site</a>
+    <br />
+
+    <!-- go somewhere in same tab -->
+    <a href="https://www.amazon.in/" target="_self"
+      >Go to Amazon with self attribute</a
+    >
+    <br />
+    <!-- go somewhere in blank / new tab -->
+    <a href="https://www.amazon.in/" target="_blank"
+      >Go to Amazon with blank attribute</a
+    >
+
+    <br />
+
+    <!-- go to image stored in remote / local location -->
+    <a
+      href="https://images-eu.ssl-images-amazon.com/images/G/31/IMG23/TVs/nikita/1/1/Samsung_Mi_PC_CC_379x304._SY304_CB562051643_.jpg"
+      >Link to an image</a
+    >
+    <br />
+    <!-- go to document stored in remote location -->
+    <a
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      >Link to an document</a
+    >
+    <br />
+
+    <!-- go to document / asset stored in local location -->
+    <a href="../Lecture-4/semanatic-tags-25-9.html"
+      >Go to File on same computer
+    </a>
+
+    <!-- Go to section in same file -->
+    <hr />
+    <a href="#target1">Go to target 1 section</a>
+    <br />
+
+    <a href="#target2">Go to target 2 section</a>
+    <div class="spacer" style="height: 500px; background-color: red"></div>
+    <div id="target1">Target 1</div>
+    <div class="spacer" style="height: 500px; background-color: red"></div>
+    <div id="target2">Target 2</div>
+  </body>
+</html>
