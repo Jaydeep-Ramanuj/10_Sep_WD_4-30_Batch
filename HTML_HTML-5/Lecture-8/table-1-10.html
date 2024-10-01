@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    Table => <table>
+Table row => <tr>
+Table heading => <th>
+Table data => <td>
+
+
+To merge multiple rows, 
+rowspan=2
+
+To merge multiple columns, 
+colspan=2 
+-->
+
+    <table
+      border="1"
+      style="border-collapse: collapse"
+      cellspacing="5"
+      cellpadding="5"
+    >
+      <caption style="caption-side: bottom">
+        Students data
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="3">Students Details</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rahul</td>
+          <td>Babra</td>
+          <td>WD</td>
+        </tr>
+
+        <tr>
+          <td>Jaimin</td>
+          <td>Rajkot</td>
+          <td>WDUX</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">Bhavesh</td>
+          <td rowspan="2">Babra</td>
+          <td>WD</td>
+        </tr>
+        <tr>
+          <td>Front end</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total students</td>
+          <td>3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
