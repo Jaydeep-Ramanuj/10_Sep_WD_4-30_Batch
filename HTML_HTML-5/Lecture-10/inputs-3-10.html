@@ -40,6 +40,8 @@
 
       Cricket:<input type="checkbox" name="" id="" /> Kabaddi:<input
         type="checkbox"
+        checked
+        disabled
         name=""
         id=""
       />
@@ -48,6 +50,7 @@
       Male:<input type="radio" name="gender" id="" /> Female:<input
         type="radio"
         name="gender"
+        checked
         id=""
       />
       <input type="button" name="" id="" value="Jaimin" />
@@ -55,6 +58,30 @@
       <input type="reset" name="" id="" />
 
       <button>Cancel</button>
+
+      <select name="" id="">
+        <option value="">Baroda</option>
+        <option value="" selected>Rajkot</option>
+        <option value="">Surat</option>
+        <option value="" disabled>Mumbai</option>
+      </select>
+
+      <input
+        type="text"
+        name=""
+        id=""
+        placeholder="Enter your collage name"
+        list="collage-list"
+      />
+
+      <datalist id="collage-list">
+        <option value="Nirma">Nirma University</option>
+        <option value="Atmiya">Atmiya University</option>
+        <option value="Marwadi">Marwadi University</option>
+        <option value="RK">RK University</option>
+        <option value="Parul">Parul University</option>
+        <option value="Saurastra">Saurastra University</option>
+      </datalist>
     </form>
   </body>
 </html>
