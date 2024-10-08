@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <table align="center">
+        <tr>
+          <td>
+            <b><label for="name">Name:</label></b>
+          </td>
+          <td>
+            <input
+              type="text"
+              name=""
+              id="name"
+              required
+              minlength="2"
+              maxlength="15"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b><label for="surname">Surname:</label></b>
+          </td>
+          <td>
+            <input
+              type="text"
+              name=""
+              id="surname"
+              required
+              minlength="3"
+              maxlength="15"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b><label for="dob">Date of birth:</label></b>
+          </td>
+          <td><input type="date" name="" id="dob" required /></td>
+        </tr>
+
+        <tr>
+          <td>
+            <b><label for="email">Email:</label></b>
+          </td>
+          <td><input type="email" name="" id="email" required /></td>
+        </tr>
+
+        <td>
+          <b><label for="phone">Phone</label></b>
+        </td>
+        <td>
+          <input
+            type="tel"
+            name=""
+            id="phone"
+            required
+            minlength="10"
+            maxlength="10"
+          />
+        </td>
+        <tr>
+          <td>
+            <b><label for="city">City:</label></b>
+          </td>
+          <td>
+            <input type="text" name="" id="city" required minlength="3" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b><label for="state">State:</label></b>
+          </td>
+          <td>
+            <select name="" id="state">
+              <option value="Gujrat" selected>Gujrat</option>
+              <option value="Maharstra">Maharstra</option>
+              <option value="Rajsthan">Rajsthan</option>
+              <option value="Pradesh">Madhya Pradesh</option>
+              <option value="Assam" disabled>Assam</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b><label for="course">Course:</label></b>
+          </td>
+          <td>
+            <input
+              type="text"
+              name=""
+              id="course"
+              value="Website Designing"
+              readonly
+              disabled
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b><label for="collage">Collage:</label></b>
+          </td>
+          <td><input type="text" name="" id="collage" list="clg-list" /></td>
+          <datalist id="clg-list">
+            <option value="Atmiya">Atmiya University</option>
+            <option value="RK">RK University</option>
+            <option value="Saurastra">Saurastra University</option>
+            <option value="Nirma">Nirma University</option>
+            <option value="PDPU">PDPU University</option>
+          </datalist>
+        </tr>
+        <tr>
+          <td>
+            <b><label for="marks">Marks:</label></b>
+          </td>
+          <td><input type="number" name="" id="marks" min="55" max="100" /></td>
+        </tr>
+        <tr>
+          <td>
+            <b><label for="resume">Resume:</label></b>
+          </td>
+          <td><input type="file" name="" id="resume" accept=".pdf" /></td>
+        </tr>
+
+        <tr>
+          <td>
+            <b><label for="pass">Password:</label></b>
+          </td>
+          <td>
+            <input
+              type="password"
+              id="pass"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b><input type="submit" name="" id="" /></b>
+          </td>
+          <td><input type="reset" name="" id="" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
