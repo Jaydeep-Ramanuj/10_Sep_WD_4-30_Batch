@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="console.log('button clicked')">Click here</button>
+    <button onclick="changeColor(this)">Click here to change color</button>
+
+    <button onmouseover="console.log('Mouse hovered')">Hover me</button>
+    <button ondblclick="console.log('Mouse double clicked')">
+      Double click me
+    </button>
+
+    <script>
+      function changeColor(ele) {
+        ele.style.backgroundColor = 'red';
+      }
+    </script>
+  </body>
+</html>
