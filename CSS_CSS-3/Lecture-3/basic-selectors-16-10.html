@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Universal selector (*), it will apply on all elements */
+      * {
+        border: 1px solid black;
+      }
+
+      /* tag selector / type selector, it will apply on all specified type elements */
+
+      /* p {
+        color: red;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      i {
+        color: red;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      } */
+
+      /* group selector, it will apply same style on all group elements  */
+      p,
+      i {
+        color: red;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* class selector (.), it is used to give same style to multiple elements, a class can be used multiple times and an element can have multiple class */
+
+      .blue-border {
+        border-color: blue;
+      }
+
+      .rounded-border {
+        border-radius: 24px;
+      }
+
+      /* id selector (#), it is used to give style to specific single element, id can't be used more than 1 time, an element can't have more than 1 id */
+      #special-div {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is p tag</p>
+    <p class="blue-border rounded-border">This is p tag</p>
+    <div class="blue-border rounded-border" id="special-div">
+      This is div tag
+    </div>
+    <i>This is i tag</i>
+    <b>This is b tag</b>
+    <u class="blue-border">This is u tag</u>
+    <mark class="blue-border">This is mark tag</mark>
+  </body>
+</html>

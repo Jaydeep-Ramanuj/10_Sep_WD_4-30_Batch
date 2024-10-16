@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* inheritance of property values, parent pass their property value to their children, but not all properties will inherit */
+
+      .parent {
+        /* These properties will not inherit in children */
+
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border: 1px solid black;
+
+        /* These properties will inherit in children */
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .child {
+        /* height: 100px;
+        width: 100px; */
+        background-color: teal;
+        border: inherit;
+        color: blue;
+        font-size: 10px;
+      }
+
+      i {
+        background-color: yellowgreen;
+      }
+      p {
+        /* width: 300px; */
+        background-color: rgba(238, 130, 238, 0.281);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <p class="child">Child 1</p>
+      <b class="child">Child 2</b>
+      <i class="child">Child 3</i>
+    </div>
+  </body>
+</html>
