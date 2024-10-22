@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        margin: 50px auto;
+        /* 
+        border-radius: 0px;
+        border-radius: 5px;
+        border-radius: 12px;
+        border-radius: 24px;
+
+        border-radius: 50%; */
+
+        /* All corners */
+        border-radius: 10px;
+
+        /* 1: top-left + bottom right 2: bottom-left + top right */
+        border-radius: 10px 20px;
+
+        /* 1: top-left  2: bottom left + top right 3: bottom right */
+        border-radius: 10px 20px 30px;
+
+        /* 1: top-left  2: top right 3: bottom right 4: bottom left */
+        border-radius: 10px 20px 30px 40px;
+
+        border-radius: 100px 100px / 50px 50px;
+        border-radius: 20px 40px / 150px 250px;
+        border-radius: 0px 100px / 200px 50px;
+
+        border-radius: 100% 0% 68% 32% / 67% 0% 100% 33%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
