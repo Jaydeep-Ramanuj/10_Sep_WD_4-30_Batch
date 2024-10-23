@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* 
+decedent => પેઢી 
+Child => સંતાન 
+sibling => ભાઈ-બહેન  
+adjacent => એક દમ બાજુમાં
+general  => સામાન્ય 
+*/
+
+      /* descendent selector ( ), it can select any element inside mentioned element at any level  */
+
+      /* .parent .child {
+        border: 1px solid red;
+        margin: 3px;
+      } */
+
+      /* child selector (>), it can select any direct child of given element */
+      /* .parent > .child {
+        border: 1px solid red;
+        margin: 3px;
+      } */
+
+      /* Adjacent sibling selector (+), it is used to select directly next sibling    */
+
+      /* #pintu + .sub-child {
+        color: red;
+      } */
+
+      /* General sibling selector (~), it is used to select all siblings after that element    */
+      #pintu ~ .sub-child {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        child1
+        <div class="sub-child">sub-child1</div>
+      </div>
+      <div class="child">
+        child2
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">
+          sub-child2
+          <div class="child">Sub-sub-child</div>
+        </div>
+      </div>
+      <div class="child">
+        child3
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child" id="pintu">sub-child2 Pintu</div>
+        <div class="sub-child">sub-child3</div>
+        <p>This is p tag</p>
+        <div class="sub-child">sub-child4</div>
+        <div class="sub-child">sub-child5</div>
+      </div>
+    </div>
+  </body>
+</html>

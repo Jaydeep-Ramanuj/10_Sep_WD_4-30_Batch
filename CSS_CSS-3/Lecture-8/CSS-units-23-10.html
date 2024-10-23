@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* unit => એકમ 
+absolute => પૂરેપૂરું, જેને બીજા કોઈ પર આધાર ના રાખવો પડે 
+relative => સબંધિત, જે બીજા પર આધાર રાખે છે   */
+
+      /* Absolute Units, they don't depend on anything else, are not good for responsiveness */
+      /* ex. px */
+
+      /* relative, they depend on another thing, they are usually good for responsiveness */
+      /* ex. %, vh, vw, em, rem */
+
+      /* px, it is absolute unit, use it when you don't want to change size even when making responsive  */
+      /* %, it is relative unit,  it is used to get size from your parent,  */
+      /* vw, it is relative unit, it is used to get size from viewport width  */
+      /* vh, it is relative unit, it is used to get size from viewport height  */
+
+      /* em, it is relative unit, it is used to get font size from immediate parent */
+      /* rem, it is relative unit, it is used to get font size from root element */
+      .box {
+        height: 300px;
+        width: 500px;
+        /* width: 80%; */
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+
+      .inner-box {
+        /* height: 100px; */
+        height: 10vh;
+        /* width: 100px; */
+        /* width: 50%; */
+        width: 50vw;
+        background-color: teal;
+      }
+
+      .parent,
+      .child,
+      .sub-child {
+        border: 2px solid black;
+        margin: 10px;
+        padding: 5px;
+      }
+      .child {
+        border-color: red;
+      }
+      .sub-child {
+        border-color: blue;
+      }
+
+      .parent {
+        /* font-size: 16px; */
+        /* font-size: 8px; */
+        font-size: 40px;
+      }
+
+      .child {
+        /* font-size: 16px; */
+        /* font-size: 2em; */
+        /* font-size: 1em; */
+        /* font-size: 0.5em; */
+        font-size: 2em;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      .sub-child {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="inner-box"></div>
+    </div>
+
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+      </div>
+    </div>
+  </body>
+</html>
