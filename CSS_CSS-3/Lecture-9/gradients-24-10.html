@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        background-image: linear-gradient(blue, pink);
+        background-image: linear-gradient(to right, blue, pink);
+        background-image: linear-gradient(to top, blue, pink);
+        background-image: linear-gradient(to left, blue, pink);
+        background-image: linear-gradient(to bottom, blue, pink);
+        background-image: linear-gradient(45deg, blue, pink);
+        background-image: linear-gradient(-45deg, blue, pink);
+        background-image: linear-gradient(45deg, blue, pink, purple);
+        /* background-image: linear-gradient(
+          45deg,
+          purple,
+          teal,
+          skyblue,
+          green,
+          yellow,
+          orange,
+          maroon
+        ); */
+
+        background-image: linear-gradient(to right, blue 20%, pink 70%, purple);
+
+        background-image: radial-gradient(skyblue, pink, orange, red);
+        background-image: radial-gradient(
+          farthest-corner at 40% 70%,
+          skyblue,
+          pink,
+          orange,
+          red
+        );
+
+        background-image: conic-gradient(blue, pink, red);
+
+        background-image: repeating-linear-gradient(blue 2%, pink 20%);
+        background-image: repeating-radial-gradient(
+          blue 2%,
+          pink 20%,
+          purple 30%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
