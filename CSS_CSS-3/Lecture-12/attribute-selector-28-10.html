@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 10px;
+        border: 2px solid black;
+
+        display: flex;
+        gap: 20px;
+      }
+
+      .child {
+        height: 50px;
+        width: fit-content;
+        border-radius: 5px;
+        background-color: yellowgreen;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* to give style to every element that has perticular attribute */
+
+      /* .child[data-custom-attr] {
+        background-color: tomato;
+      } */
+
+      /* (=) to give style to every element whose given attribute value as exactly per we mentioned */
+      /* .child[data-custom-attr='rahul'] {
+        background-color: tomato;
+      } */
+
+      /* (|=) to give style to every element whose given attribute value as per we mentioned, hyphen separated values are accepted */
+      /* .child[data-custom-attr|='rahul'] {
+        background-color: tomato;
+      } */
+
+      /* (~=) to give style to every element whose given attribute value as per we mentioned, space separated values are accepted */
+      /* .child[data-custom-attr~='rahul'] {
+        background-color: tomato;
+      } */
+
+      /* ($=) to give style to every element whose given attribute ends with mentioned word  */
+      /* .child[data-custom-attr$='rahul'] {
+        background-color: tomato;
+      } */
+
+      /* (^=) to give style to every element whose given attribute starts with mentioned word  */
+      /* .child[data-custom-attr^='rahul'] {
+        background-color: tomato;
+      } */
+
+      /* ($=) to give style to every element whose given attribute includes mentioned word  */
+      .child[data-custom-attr*='rahul'] {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">No attribute</div>
+      <div class="child" data-custom-attr="">No value</div>
+      <div class="child" data-custom-attr="rahul">rahul</div>
+      <div class="child" data-custom-attr="rahul-student">rahul-student</div>
+      <div class="child" data-custom-attr="rahul student">rahul student</div>
+      <div class="child" data-custom-attr="rahulrahul">rahulrahul</div>
+      <div class="child" data-custom-attr="rahulBaroliya">rahulBaroliya</div>
+      <div class="child" data-custom-attr="Baroliyarahul">Baroliarahul</div>
+      <div class="child" data-custom-attr="bhavesh">bhavesh</div>
+      <div class="child" data-custom-attr="jaimin">jaimin</div>
+    </div>
+  </body>
+</html>

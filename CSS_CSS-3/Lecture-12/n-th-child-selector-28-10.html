@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 10px;
+        border: 2px solid black;
+
+        display: flex;
+        gap: 20px;
+      }
+
+      .child {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        background-color: yellowgreen;
+        font-size: 18px;
+        font-weight: 600;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* nth-child() selector, it is used to find specific child  */
+      /* nth-of-type() selector, it is used to find specific type   */
+
+      /* .child:nth-child(3) {
+        background-color: tomato;
+      }
+      .child:nth-child(6) {
+        background-color: teal;
+      } */
+
+      /* .child:nth-child(odd) {
+        background-color: tomato;
+      } */
+      /* .child:nth-child(even) {
+        background-color: tomato;
+      } */
+      /* .child:nth-child(n + 4) {
+        background-color: tomato;
+      } */
+      /* .child:nth-child(3n) {
+        background-color: tomato;
+      } */
+      /* .child:nth-last-child(3) {
+        background-color: tomato;
+      } */
+      .child:nth-of-type(5) {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+      <div class="child">7</div>
+      <div class="child">8</div>
+      <div class="child">9</div>
+      <div class="child">10</div>
+    </div>
+  </body>
+</html>
