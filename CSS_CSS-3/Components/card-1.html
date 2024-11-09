@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .card {
+        max-width: 300px;
+        border-radius: 24px;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: hidden;
+
+        transition: all 300ms;
+      }
+
+      .card .header {
+        height: 100px;
+        background-color: #555bf6;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        border: 1px solid transparent;
+      }
+
+      .card .header img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #555bf6;
+      }
+
+      .card .card-info {
+        margin-top: 30px;
+        padding: 15px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #aca199;
+      }
+
+      .card .card-info h3 {
+        color: #3f3b39;
+      }
+      .card .card-info h5 {
+        margin-top: 5px;
+      }
+
+      .socials {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      .socials i {
+        margin-left: 10px;
+      }
+      .socials i:nth-child(1) {
+        color: #2674b3;
+      }
+      .socials i:nth-child(2) {
+        color: #5e5854;
+      }
+      .socials i:nth-child(3) {
+        color: #bd6063;
+      }
+      button {
+        margin-top: 15px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 24px;
+        background-color: #555afb;
+        color: white;
+        border: 2px solid transparent;
+
+        transition: all 300ms;
+      }
+
+      button:hover {
+        border: 2px solid #555afb;
+        background-color: transparent;
+        color: #555afb;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+
+      .card:hover .card-info {
+        background-image: url(https://i.gifer.com/X5NS.gif);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="header">
+        <img
+          src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+      </div>
+      <div class="card-info">
+        <h3>Rahul Baroliya</h3>
+        <h4>Front End Developer</h4>
+        <h5>Rajkot, Gujrat</h5>
+
+        <div class="socials">
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <button>Message</button>
+      </div>
+    </div>
+  </body>
+</html>
