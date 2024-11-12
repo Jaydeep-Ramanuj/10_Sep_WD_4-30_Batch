@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        height: 90vh;
+        background-color: #b1e3f9;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .profile-card {
+        max-width: 600px;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: #d8f1fd;
+        margin: 0 auto;
+        margin-top: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        color: rgba(39, 39, 39, 0.818);
+
+        display: flex;
+        gap: 30px;
+
+        transition: all 300ms;
+      }
+
+      .profile-card img {
+        height: 100px;
+        min-width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+      }
+
+      .profile-card .card-info p {
+        margin-top: 20px;
+      }
+
+      .profile-card .stats {
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        gap: 30px;
+        font-weight: 600;
+      }
+
+      .btns {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btns .follow-btn {
+        padding: 8px 24px;
+        background-color: #222222;
+        color: white;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 2px solid #222222;
+      }
+
+      .btns .view-profile-btn {
+        padding: 8px 24px;
+        color: #222222;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 2px solid #222222;
+
+        transition: all 300ms;
+      }
+
+      .view-profile-btn:hover {
+        background-color: #222222;
+        color: white;
+      }
+      .follow-btn:hover {
+        background-color: transparent;
+        color: #222222;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-15px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-card">
+      <img
+        src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt=""
+      />
+      <div class="card-info">
+        <h2>Harul Baroliya</h2>
+        <h5>@rahul</h5>
+        <p>
+          I'm experienced Frontend developer with passion for websites and tech
+          in general.
+        </p>
+
+        <div class="stats">
+          <div class="number">
+            <h3>15K</h3>
+            <h5>Views</h5>
+          </div>
+          <div class="number">
+            <h3>32</h3>
+            <h5>Projects</h5>
+          </div>
+          <div class="number">
+            <h3>48K</h3>
+            <h5>Followers</h5>
+          </div>
+        </div>
+        <div class="btns">
+          <div class="follow-btn">Follow</div>
+          <div class="view-profile-btn">View Profile</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
