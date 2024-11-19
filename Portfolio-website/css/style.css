@@ -92,8 +92,11 @@ header .logo {
 
 #hero-section {
   padding: var(--section-padding);
-  margin-top: var(--section-gap);
+  padding-top: 30px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary-color);
 }
 
 #hero-section > img {
@@ -102,4 +105,115 @@ header .logo {
 
 #hero-section .content {
   max-width: 50%;
+}
+
+#hero-section .content h5 {
+  color: var(--special-color);
+}
+#hero-section .content h2 {
+  font-size: 48px;
+}
+#hero-section .content h4 {
+  color: #1f7a31;
+  font-weight: 400;
+}
+#hero-section .content p {
+  margin-top: 10px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+#hero-section .content span,
+#about-me-section .content span {
+  font-weight: 800;
+  margin-left: 30px;
+}
+#hero-section .content span i,
+#about-me-section .content span i {
+  margin-left: 10px;
+  color: var(--special-color);
+}
+
+/* #about-me-section */
+
+#about-me-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#about-me-section > img {
+  height: 600px;
+}
+#about-me-section .content {
+  max-width: 50%;
+}
+
+#about-me-section .content > h4 {
+  color: var(--special-color);
+  font-weight: 600;
+}
+#about-me-section .content > h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+#about-me-section .content > p {
+  margin: 15px 0px;
+}
+
+#about-me-section .content .details {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 80%;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+#about-me-section .content .details .detail {
+  display: flex;
+}
+#about-me-section .content .details .detail h3 {
+  color: var(--special-color);
+}
+#about-me-section .content .details .detail img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* #service-section */
+
+#service-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+
+#service-section .section-heading h6 {
+  text-align: end;
+  margin-right: 100px;
+  color: var(--special-color);
+}
+
+#service-section .service-cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#service-section .service-cards img {
+  height: 250px;
+}
+#service-section .service-cards .service-card {
+  max-width: 300px;
+  text-align: center;
+}
+
+#service-section .service-cards .service-card h4,
+#service-section .service-cards .service-card h5 {
+  width: 100%;
+  margin-top: 5px;
+}
+#service-section .service-cards .service-card h5 {
+  font-weight: 400;
 }
