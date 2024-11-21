@@ -217,3 +217,88 @@ header .logo {
 #service-section .service-cards .service-card h5 {
   font-weight: 400;
 }
+
+/* #case-study-section  */
+
+#case-study-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+
+#case-study-section .case-studies {
+  margin-top: 30px;
+}
+
+#case-study-section .case-studies .case-study {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: fit-content;
+  display: flex;
+  gap: 50px;
+}
+
+#case-study-section .case-studies .case-study img {
+  height: 250px;
+}
+
+#case-study-section .case-studies .case-study .content {
+  max-width: 500px;
+}
+
+#case-study-section .case-studies .case-study .content h2 {
+  color: var(--special-color);
+  font-weight: 500;
+}
+#case-study-section .case-studies .case-study .content h3 {
+  font-weight: 500;
+}
+
+#case-study-section .case-studies .case-study .content p {
+  margin: 15px 0;
+}
+
+#case-study-section .case-studies .case-study .content .btn {
+  background-color: transparent;
+  border: 1px solid var(--special-color);
+  color: var(--special-color);
+}
+
+/* #portfolio-section */
+
+#portfolio-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+
+#portfolio-section .portfolio-cards {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#portfolio-section .portfolio-cards img {
+  height: 250px;
+}
+
+/* #clients-section */
+
+#clients-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+#clients-section .clients {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* #testimonials-section */
+
+#clients-section .clients img {
+  object-fit: contain;
+  height: 35px;
+}
