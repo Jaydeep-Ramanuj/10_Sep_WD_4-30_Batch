@@ -14,10 +14,11 @@ body,
 
   --special-color: #f7c71b;
 
-  --section-padding: 0px 50px;
+  --section-padding: 0px 100px;
   --section-gap: 50px;
 
   --primary-font-color: #2d2d2d;
+  --secondary-font-color: #797773;
 }
 
 /*  common classes */
@@ -36,6 +37,7 @@ body {
   background-color: var(--special-color);
   color: white;
   text-align: center;
+  border: none;
 }
 
 .section-heading {
@@ -54,9 +56,9 @@ body {
 /* header */
 
 header {
-  padding-top: 40px;
   display: flex;
   padding: var(--section-padding);
+  padding-top: 20px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-primary-color);
@@ -301,4 +303,108 @@ header .logo {
 #clients-section .clients img {
   object-fit: contain;
   height: 35px;
+}
+
+/* footer */
+
+footer {
+  margin-top: var(--section-gap);
+  background-image: linear-gradient(#f0ede2, #f2f2f2);
+}
+
+footer .contact-us {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 100px;
+  padding-top: 50px;
+}
+
+footer .contact-us .contact-details {
+  margin-top: 50px;
+  max-width: 40%;
+}
+footer .contact-us .contact-details i {
+  font-size: 24px;
+  color: var(--special-color);
+}
+footer .contact-us .contact-details h2 {
+  color: var(--primary-font-color);
+  font-weight: 600;
+  padding-left: 60px;
+}
+footer .contact-us .contact-details h5 {
+  margin-bottom: 30px;
+  max-width: 90%;
+  padding-left: 60px;
+}
+
+footer .contact-us .contact-details h5,
+footer .contact-us .contact-details h3 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--secondary-font-color);
+}
+
+footer .contact-us .contact-details .info h3 {
+  max-width: 60%;
+}
+
+footer .contact-us .contact-details .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+footer .contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .contact-us form input,
+footer .contact-us form textarea {
+  width: 400px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+footer .footer-bottom {
+  padding: var(--section-padding);
+  margin: 100px 0;
+  display: flex;
+}
+
+footer .footer-bottom .site-info {
+  max-width: 30%;
+}
+footer .footer-bottom .site-info h2 {
+  font-family: 'Imperial Script', cursive;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--special-color);
+}
+
+footer .footer-bottom .site-info h4 {
+  font-weight: 500;
+  color: var(--secondary-font-color);
+}
+
+footer .footer-bottom .quick-links {
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: 30px; */
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+footer .footer-bottom .quick-links li {
+  margin-top: 10px;
+  list-style: none;
+  color: var(--secondary-font-color);
+}
+
+footer .bar {
+  height: 30px;
+  background-color: var(--special-color);
 }
