@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box,
+      .box2,
+      .box3,
+      .box4 {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        transition: all 500ms;
+      }
+
+      .box2 {
+        background-color: greenyellow;
+      }
+      .box3 {
+        background-color: teal;
+      }
+      .box4 {
+        background-color: violet;
+      }
+
+      .box:hover {
+        transform: scale(1);
+        transform: scale(1.1);
+        transform: scale(0.7);
+
+        transform: scaleX(0.7);
+        transform: scaleX(1.2);
+
+        transform: scaleY(1.2);
+        transform: scaleY(0.6);
+
+        transform: scale(1.2, 0.8);
+      }
+
+      .box2:hover {
+        transform: skew(20deg);
+        transform: skew(-20deg);
+
+        transform: skewX(10deg);
+        transform: skewX(-10deg);
+
+        transform: skewY(10deg);
+        transform: skewY(-10deg);
+
+        transform: skew(-20deg, 30deg);
+      }
+
+      .box3:hover {
+        transform: translate(100px);
+
+        transform: translateX(50px);
+        transform: translateX(-50px);
+
+        transform: translateY(50px);
+        transform: translateY(-50px);
+
+        transform: translate(-50px, 50px);
+        transform: translate(-50px, -50px);
+      }
+
+      .box4:hover {
+        transform: rotate(30deg);
+        transform: rotate(-30deg);
+        transform: rotate(-270deg);
+        transform: rotate(-360deg);
+        transform: rotate(-500deg);
+
+        transform: perspective(400px) rotateX(60deg);
+        transform: perspective(400px) rotateX(91deg);
+
+        transform: perspective(400px) rotateY(20deg);
+        transform: perspective(400px) rotateY(-20deg);
+
+        transform: perspective(400px) scale(0.7) rotateX(-20deg)
+          translateX(-100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </body>
+</html>
