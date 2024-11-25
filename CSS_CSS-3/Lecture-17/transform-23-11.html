@@ -8,7 +8,8 @@
       .box,
       .box2,
       .box3,
-      .box4 {
+      .box4,
+      .box5 {
         height: 300px;
         width: 300px;
         background-color: tomato;
@@ -25,6 +26,9 @@
       }
       .box4 {
         background-color: violet;
+      }
+      .box5 {
+        background-color: steelblue;
       }
 
       .box:hover {
@@ -83,6 +87,20 @@
         transform: perspective(400px) scale(0.7) rotateX(-20deg)
           translateX(-100px);
       }
+
+      .box5:hover {
+        transform: rotate(45deg);
+        /* top left */
+        transform-origin: 0 0;
+        /* top right */
+        transform-origin: 100% 0;
+        /* bottom left */
+        transform-origin: 0 100%;
+        /* bottom right */
+        transform-origin: 100% 100%;
+        /* custom */
+        transform-origin: 80% 20%;
+      }
     </style>
   </head>
   <body>
@@ -90,5 +108,6 @@
     <div class="box2"></div>
     <div class="box3"></div>
     <div class="box4"></div>
+    <div class="box5"></div>
   </body>
 </html>
