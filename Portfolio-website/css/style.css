@@ -29,6 +29,7 @@ a {
 
 body {
   background-color: var(--bg-secondary-color);
+  border: 1px solid transparent;
 }
 .btn {
   width: fit-content;
@@ -62,6 +63,12 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-primary-color);
+  height: 80px;
+
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
 }
 
 header nav a {
@@ -94,6 +101,7 @@ header .logo {
 
 #hero-section {
   padding: var(--section-padding);
+  margin-top: 80px;
   padding-top: 30px;
   display: flex;
   align-items: center;

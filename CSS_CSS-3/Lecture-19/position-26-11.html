@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        margin: 50px;
+        padding: 50px;
+        background-color: turquoise;
+        position: relative;
+      }
+      .parent {
+        background-color: wheat;
+        height: 500px;
+        border-radius: 12px;
+        display: flex;
+        margin: 100px;
+
+        /* position: relative; */
+      }
+
+      /* position, it is used to give position to any element, which can be use to freely move element in document */
+
+      /* position types */
+
+      /* 1. static, default, it used to remove position, it doesn't take offset */
+      /* 2. fixed, it is fixed at position we have specified for entire document, even when we scroll the website it will stay at same location, it will take offset from viewport */
+      /* 3. sticky, it is like fixed but can't not go outside of its parent, it will take offset from its original location, it will occupy space in document flow   */
+      /* 4. relative, it is used to give offset from it  original location, it will occupy space in document flow  */
+      /* 5. absolute, it is used to move element freely around document, it will take offset from its nearest positioned parent */
+
+      /* offset types, it is used to shift element for whichever value you pass, positive value will push inward while negative value push outwards */
+
+      /* 1. top */
+      /* 2. left */
+      /* 3. bottom */
+      /* 4. right */
+
+      /* here between top and bottom, top is dominant */
+      /* here between left and right, left is dominant */
+
+      /* z-index, it is used to  */
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+
+      .child:nth-child(1) {
+        position: sticky;
+        top: 100px;
+        left: 50px;
+
+        z-index: 3;
+      }
+      .child:nth-child(2) {
+        background-color: teal;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        z-index: 2;
+      }
+      .child:nth-child(3) {
+        background-color: turquoise;
+        position: relative;
+        top: 300px;
+        left: 300px;
+      }
+      .child:nth-child(4) {
+        background-color: yellowgreen;
+      }
+      .child:nth-child(5) {
+        background-color: violet;
+        position: fixed;
+        /* top: 50px;
+        left: 50px; */
+
+        bottom: 50px;
+        right: 50px;
+      }
+
+      .spacer {
+        height: 1500px;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="parent">
+        <div class="child">child1</div>
+        <div class="child">child2</div>
+        <div class="child">child3</div>
+        <div class="child">child4</div>
+        <div class="child">child5</div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+  </body>
+</html>

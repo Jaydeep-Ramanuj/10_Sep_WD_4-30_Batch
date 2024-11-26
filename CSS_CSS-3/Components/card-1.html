@@ -26,6 +26,8 @@
         overflow: hidden;
 
         transition: all 300ms;
+
+        position: relative;
       }
 
       .card .header {
@@ -108,10 +110,22 @@
       .card:hover .card-info {
         background-image: url(https://i.gifer.com/X5NS.gif);
       }
+      .pro {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 4px 12px;
+        font-size: 10px;
+        background-color: rgba(211, 211, 211, 0.453);
+        border-radius: 24px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
   </head>
   <body>
     <div class="card">
+      <div class="pro">Pro</div>
       <div class="header">
         <img
           src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600"
