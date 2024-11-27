@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .loader {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 50px auto;
+        border: 3px solid grey;
+
+        animation-name: rotate;
+        animation-duration: 4000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        position: relative;
+      }
+
+      .ball {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: tomato;
+
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        /* left: calc(50% - 10px); */
+
+        transform: translateX(-10px);
+      }
+
+      .ball:nth-child(2) {
+        background-color: teal;
+        top: -8px;
+        left: 50%;
+        transform: translateX(10px);
+      }
+      .ball:nth-child(3) {
+        background-color: yellowgreen;
+        top: -5px;
+        left: 50%;
+        transform: translateX(30px);
+      }
+
+      @keyframes rotate {
+        from {
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>

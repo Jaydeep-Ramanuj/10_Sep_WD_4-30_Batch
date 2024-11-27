@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .loader {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin: 50px auto;
+        border: 5px solid transparent;
+        border-top-color: tomato;
+        border-bottom-color: tomato;
+        border-right-color: lime;
+        border-left-color: lime;
+
+        animation-name: rotate;
+        animation-duration: 2000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .loader2 {
+        border: 75px solid transparent;
+        border-top-color: tomato;
+        border-bottom-color: tomato;
+        /* border-right-color: lime;
+        border-left-color: lime; */
+      }
+      .loader3 {
+        border: 5px solid grey;
+        /* border-top-color: tomato;
+        border-bottom-color: tomato;
+        border-right-color: lime; */
+        border-top-color: transparent;
+      }
+      /* .loader4 {
+        border: ;
+        border-left: 5px solid tomato;
+        border-top: 5px solid blue;
+      } */
+
+      @keyframes rotate {
+        from {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader loader1"></div>
+    <div class="loader loader2"></div>
+    <div class="loader loader3"></div>
+    <div class="loader loader4"></div>
+  </body>
+</html>
