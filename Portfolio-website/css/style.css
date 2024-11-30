@@ -7,14 +7,14 @@ body,
   font-family: 'Poppins', sans-serif;
   color: var(--primary-font-color);
 }
-
 :root {
   --bg-primary-color: #ffffff;
   --bg-secondary-color: #f1f1f1;
 
   --special-color: #f7c71b;
 
-  --section-padding: 0px 100px;
+  /* --section-padding: 0px 100px; */
+  --section-padding: 0px 20px;
   --section-gap: 50px;
 
   --primary-font-color: #2d2d2d;
@@ -69,11 +69,45 @@ header {
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
+
+  position: relative;
+}
+
+header .nav-wrapper {
+  align-items: center;
+  gap: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+
+  position: absolute;
+  top: 80px;
+  left: 110vw;
+
+  background-color: var(--special-color);
+  padding: 20px;
+
+  transition: all 300ms;
+  transition-delay: 100ms;
+}
+
+header .nav-wrapper .btn {
+  background-color: orange;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 header nav a {
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  text-align: center;
   position: relative;
+  font-weight: 500;
 }
 
 header nav a::before {
@@ -96,25 +130,37 @@ header .logo {
   font-size: 48px;
   font-family: 'Imperial Script', cursive;
 }
+header #toggle {
+  display: none;
+}
+
+header #toggle:checked + .nav-wrapper {
+  display: flex;
+  /* visibility: visible; */
+  left: 0;
+}
 
 /* #hero-section */
 
 #hero-section {
   padding: var(--section-padding);
-  margin-top: 80px;
+  /* margin-top: 80px; */
   padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap-reverse;
   background-color: var(--bg-primary-color);
 }
 
 #hero-section > img {
-  height: 400px;
+  /* height: 400px; */
+  height: 300px;
 }
 
 #hero-section .content {
-  max-width: 50%;
+  /* max-width: 50%; */
+  padding-bottom: 20px;
 }
 
 #hero-section .content h5 {
@@ -152,13 +198,16 @@ header .logo {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #about-me-section > img {
-  height: 600px;
+  /* height: 600px; */
+  /* height: 200px; */
+  display: none;
 }
 #about-me-section .content {
-  max-width: 50%;
+  /* max-width: 50%; */
 }
 
 #about-me-section .content > h4 {
@@ -210,6 +259,8 @@ header .logo {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 #service-section .service-cards img {
   height: 250px;
@@ -244,11 +295,18 @@ header .logo {
   margin-top: 50px;
   width: fit-content;
   display: flex;
+  flex-wrap: wrap;
   gap: 50px;
+}
+
+#case-study-section .case-studies .case-study:nth-child(2) {
+  flex-wrap: wrap-reverse;
 }
 
 #case-study-section .case-studies .case-study img {
   height: 250px;
+  display: block;
+  margin: 0 auto;
 }
 
 #case-study-section .case-studies .case-study .content {
@@ -304,6 +362,9 @@ header .logo {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
+  gap: 30px;
+  overflow: auto;
+  padding-bottom: 30px;
 }
 
 /* #testimonials-section */
@@ -324,14 +385,16 @@ footer .contact-us {
   width: fit-content;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
-  padding: 0 100px;
+  /* padding: 0 100px; */
+  padding: 0 20px;
   padding-top: 50px;
 }
 
 footer .contact-us .contact-details {
-  margin-top: 50px;
-  max-width: 40%;
+  /* margin-top: 50px; */
+  /* max-width: 40%; */
 }
 footer .contact-us .contact-details i {
   font-size: 24px;
@@ -369,10 +432,13 @@ footer .contact-us form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* width: 100%; */
+  flex-grow: 1;
 }
 footer .contact-us form input,
 footer .contact-us form textarea {
-  width: 400px;
+  /* width: 400px; */
+  width: 90%;
   padding: 15px;
   border-radius: 12px;
 }
@@ -381,10 +447,11 @@ footer .footer-bottom {
   padding: var(--section-padding);
   margin: 100px 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 footer .footer-bottom .site-info {
-  max-width: 30%;
+  /* max-width: 30%; */
 }
 footer .footer-bottom .site-info h2 {
   font-family: 'Imperial Script', cursive;
@@ -399,9 +466,11 @@ footer .footer-bottom .site-info h4 {
 }
 
 footer .footer-bottom .quick-links {
+  margin-top: 30px;
   display: flex;
-  justify-content: space-evenly;
-  /* gap: 30px; */
+  /* justify-content: space-evenly; */
+  justify-content: start;
+  gap: 30px;
   flex-wrap: wrap;
   flex-grow: 1;
 }
