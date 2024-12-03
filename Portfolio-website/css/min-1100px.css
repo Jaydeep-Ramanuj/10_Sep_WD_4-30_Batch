@@ -1,0 +1,17 @@
+@media screen and (min-width: 1100px) {
+  :root {
+    --section-padding: 0px 100px;
+  }
+  #hero-section .content p {
+    width: 80%;
+  }
+  #case-study-section .case-studies .case-study .content {
+    max-width: 500px;
+  }
+  #case-study-section .case-studies .case-study {
+    gap: 50px;
+  }
+  #portfolio-section .portfolio-cards {
+    width: 80%;
+  }
+}

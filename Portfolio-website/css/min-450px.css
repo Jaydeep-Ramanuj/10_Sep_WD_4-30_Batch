@@ -1,0 +1,9 @@
+@media screen and (min-width: 450px) {
+  #about-me-section .content p {
+    max-width: 80%;
+  }
+
+  footer .contact-us {
+    padding: var(--section-padding);
+  }
+}

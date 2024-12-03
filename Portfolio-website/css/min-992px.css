@@ -1,0 +1,45 @@
+@media screen and (min-width: 992px) {
+  :root {
+    --section-padding: 0px 80px;
+  }
+  header {
+    position: fixed;
+  }
+  header .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    background-color: transparent;
+    margin-left: auto;
+  }
+
+  header .nav-wrapper .btn,
+  header .nav-wrapper nav {
+    margin-left: auto;
+  }
+  header .nav-wrapper nav {
+    flex-direction: row;
+  }
+
+  header .fa-solid.fa-bars {
+    display: none;
+  }
+
+  #hero-section {
+    margin-top: 80px;
+  }
+  #about-me-section > img {
+    display: block;
+  }
+
+  #about-me-section .content {
+    max-width: 50%;
+  }
+  footer .footer-bottom .site-info {
+    max-width: 30%;
+  }
+  footer .footer-bottom .site-info h4 {
+    width: auto;
+  }
+}
