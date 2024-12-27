@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded bg-blue-600 text-white text-center transition-all hover:bg-blue-700 active:bg-blue-700 active:scale-95;
+  }
+  .btn-danger {
+    @apply px-4 py-2 rounded bg-red-600 text-white text-center transition-all hover:bg-red-700 active:bg-red-700 active:scale-95;
+  }
+  .btn-success {
+    @apply px-4 py-2 rounded bg-green-600 text-white text-center transition-all hover:bg-green-700 active:bg-green-700 active:scale-95;
+  }
+  .btn-warning {
+    @apply px-4 py-2 rounded bg-orange-600 text-white text-center transition-all hover:bg-orange-700 active:bg-orange-700 active:scale-95;
+  }
+  .btn-info {
+    @apply px-4 py-2 rounded bg-teal-600 text-white text-center transition-all hover:bg-teal-700 active:bg-teal-700 active:scale-95;
+  }
+}
