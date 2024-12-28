@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .card,
+      .card2 {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        background-image: url(https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #24252e;
+        font-weight: 600;
+
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: 'Bhavesh';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        box-sizing: border-box;
+        left: 0;
+        top: 0;
+        /* top: 100%; */
+        border-radius: inherit;
+        background-color: rgba(255, 255, 0, 0.484);
+        outline: 2px solid white;
+        outline-offset: -30px;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+        transition: all 300ms;
+
+        /* transform: scale(0); */
+      }
+
+      .card:hover::before {
+        opacity: 1;
+        /* transform: scale(1); */
+        /* top: 0; */
+      }
+
+      .card::before:hover {
+        color: white;
+      }
+
+      .card2 .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        background-color: rgba(255, 255, 0, 0.484);
+        outline: 2px solid white;
+        outline-offset: -30px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+        transition: all 300ms;
+      }
+      .card2 .overlay h4:hover {
+        color: whitesmoke;
+      }
+
+      .card2:hover .overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"></div>
+
+    <div class="card2">
+      <div class="overlay">
+        <h4>Construction</h4>
+        <h4>Duration: 6 months</h4>
+      </div>
+    </div>
+  </body>
+</html>
