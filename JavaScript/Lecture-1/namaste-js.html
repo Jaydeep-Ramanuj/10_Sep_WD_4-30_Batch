@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      console.log('Namaste Js');
+    </script>
+    <script>
+      console.log('Helllo Js');
+    </script>
+
+    <script src="namste-js.js"></script>
+    <!-- <script type="module" src=""></script> -->
+  </head>
+  <body>
+    <button onclick="console.log('Button clicked')">Click me</button>
+
+    <script>
+      console.log('Hello body from body tag');
+    </script>
+    <script>
+      document
+        .getElementsByTagName('button')[0]
+        .addEventListener('dblclick', function () {
+          console.log('button double clicked');
+        });
+
+      // // console.log('This will be a comment')
+      // this is something
+    </script>
+  </body>
+</html>
