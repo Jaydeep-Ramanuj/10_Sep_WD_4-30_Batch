@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Variable declaration: it notifies Js about declared variables which can be used to assign values later
+
+      //   variable declaration type
+
+      // 1. Var,
+
+      // -  redeclaration is possible
+      // -  reassignment is possible
+      // -  global or function scope
+
+      // 2. let
+
+      // - redeclaration is not possible
+      // - reassignment is possible
+      // - block scope
+
+      // 3. const
+
+      // - redeclaration is not possible
+      // - reassignment is not possible
+      // - need to initialize as in same line when declaration
+      // - block scope
+
+      console.log(a);
+      //  a = 10;
+      var a = 10;
+      console.log(a);
+
+      var b;
+      b = 20;
+      console.log(b);
+
+      // Redeclaration
+
+      var name = 'Ajay';
+      var name = 'Jay';
+      name = 'Sanajay';
+
+      //   console.log(age);
+
+      let age = 20;
+      age = 30;
+
+      const pi = 3.14;
+      //   pi = 4.5;
+    </script>
+  </body>
+</html>
