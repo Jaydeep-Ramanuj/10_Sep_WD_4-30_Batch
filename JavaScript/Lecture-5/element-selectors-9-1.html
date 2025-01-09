@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #my-btn {
+      }
+
+      div {
+      }
+
+      .parent .child {
+      }
+    </style>
+  </head>
+  <body>
+    <button id="my-btn">Click</button>
+
+    <div>This is div tag</div>
+    <div class="some">This is div tag with some class</div>
+    <div class="some" id="special">
+      <br />
+      <span class="some">This is span tag with some class</span>
+      This is div tag with some class and special id
+    </div>
+
+    <input
+      type="text"
+      name="username"
+      id=""
+      placeholder="Enter your username"
+    />
+
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child
+        <div class="sub-child">sub-Child</div>
+      </div>
+    </div>
+
+    <div class="child">Outside child</div>
+
+    <script>
+      let myBtn = document.getElementById('my-btn');
+      console.log(myBtn);
+
+      let divEle = document.getElementsByTagName('div');
+      console.log(divEle);
+      console.log(divEle[1]);
+
+      let someClassEles = document.getElementsByClassName('some');
+      console.log(someClassEles);
+
+      let usernameEle = document.getElementsByName('username');
+      console.log(usernameEle);
+
+      console.log(document.getElementsByClassName('child'));
+
+      let childInsideParentEle = document.querySelector('.parent .child');
+      console.log(childInsideParentEle);
+
+      let btn = document.querySelector('#my-btn');
+      console.log(btn);
+
+      let someClassEle = document.querySelector('.some');
+      console.log(someClassEle);
+      let someClassElements = document.querySelectorAll('.some');
+      console.log(someClassElements);
+    </script>
+  </body>
+</html>
