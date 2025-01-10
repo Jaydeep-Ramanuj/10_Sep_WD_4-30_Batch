@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">Box</div>
+    <div class="box2">Box2</div>
+
+    <script>
+      let box = document.getElementsByClassName('box')[0];
+      let box2 = document.getElementsByClassName('box2')[0];
+
+      // style.property_name, to give single style
+
+      box.style.color = 'red';
+      box.style.border = '2px solid black';
+      box.style.height = '300px';
+      box.style.width = '300px';
+      box.style.backgroundColor = 'tomato';
+      box.style.borderRadius = '12px';
+
+      //   style.cssText, to give css style as we give in css file
+      box2.style.cssText =
+        'height:300px; width:300px; border-radius:12px; background-color:teal; margin:50px auto;';
+
+      // window.getComputedStyle(), to get computed style from CSS
+      const box2Style = window.getComputedStyle(box2);
+
+      console.log(box2Style.width);
+      console.log(box2Style.borderRadius);
+    </script>
+  </body>
+</html>

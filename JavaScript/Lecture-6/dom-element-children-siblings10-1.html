@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        background-color: bisque;
+        padding: 10px;
+      }
+
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <!-- This is some comment -->
+      <div class="child" id="special">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <script>
+      const parentEle = document.querySelector('.parent');
+
+      //   element.children, to get list of children
+
+      console.log(parentEle.children);
+      console.log(parentEle.children[1]);
+      console.log(parentEle.children[3]);
+
+      // we can access specific children with any specific index
+      parentEle.children[2].style.backgroundColor = 'teal';
+
+      //   element.firstElementChild, to get first element child
+      console.log(parentEle.firstElementChild);
+
+      //   element.lastElementChild, to get last element child
+      console.log(parentEle.lastElementChild);
+
+      const specialEle = document.querySelector('#special');
+
+      // element.nextElementSibling,  to get next element sibling
+      console.log(specialEle.nextElementSibling);
+
+      // element.previousElementSibling,  to get previous element sibling
+      console.log(specialEle.previousElementSibling);
+
+      // element.parent, to get parent element
+      console.log(specialEle.parentElement);
+
+      console.log(specialEle.parentElement.parentElement.parentElement);
+
+      console.log(
+        specialEle.parentElement.parentElement.parentElement.parentNode
+      );
+
+      // Node, these are fundamental blocks of document, even html elements are type of node,
+      // Node can simple text, html element, comment, etc.
+
+      console.log(parentEle.childNodes);
+      console.log(parentEle.childNodes[5]);
+      parentEle.childNodes[5].textContent =
+        'This is new comment changed by JavaScript';
+
+      // element.childElementCount, it gives count of element children
+      console.log(parentEle.childElementCount);
+
+      console.log(parentEle.children.length);
+    </script>
+  </body>
+</html>
