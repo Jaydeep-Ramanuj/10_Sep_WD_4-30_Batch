@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        transition: all 300ms;
+      }
+
+      .dark-mode {
+        background-color: #24252e;
+      }
+
+      .light-mode {
+        background-color: #f5f5f5;
+      }
+
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark">Dark mode</button>
+    <button class="light">Light mode</button>
+
+    <button class="toggle">Toggle mode</button>
+
+    <div class="box">Box</div>
+
+    <script>
+      const darkModeBtn = document.querySelector('.dark');
+      const lightModeBtn = document.querySelector('.light');
+      const toggleModeBtn = document.querySelector('.toggle');
+
+      const box = document.querySelector('.box');
+      let currentMode = 'light';
+      // ****************
+      // direct style change
+      // ****************
+
+      // darkModeBtn.addEventListener('click', () => {
+      //   document.body.style.backgroundColor = '#24252e';
+      //   currentMode = 'dark';
+      // });
+
+      // lightModeBtn.addEventListener('click', () => {
+      //   document.body.style.backgroundColor = '#f5f5f5';
+      //   currentMode = 'light';
+      // });
+
+      // toggleModeBtn.addEventListener('click', () => {
+      //   if (currentMode == 'light') {
+      //     document.body.style.backgroundColor = '#24252e';
+      //     currentMode = 'dark';
+      //   } else {
+      //     document.body.style.backgroundColor = '#f5f5f5';
+      //     currentMode = 'light';
+      //   }
+      // });
+
+      // ****************
+      // using class
+      // ****************
+
+      darkModeBtn.addEventListener('click', () => {
+        document.body.classList.add('dark-mode');
+      });
+      lightModeBtn.addEventListener('click', () => {
+        document.body.classList.add('light-mode');
+      });
+
+      let body = document.getElementsByTagName('body')[0];
+
+      // by checking if dark or light class is present or not
+      // --------------------------------------------
+
+      // toggleModeBtn.addEventListener('click', () => {
+      //   if (body.classList.contains('dark-mode')) {
+      //     // document.getElementsByTagName(body)[0].classList.remove('dark-mode');
+      //     body.classList.remove('dark-mode');
+      //     body.classList.add('light-mode');
+      //   } else {
+      //     body.classList.remove('light-mode');
+      //     body.classList.add('dark-mode');
+      //   }
+      // });
+
+      // by using toggle method
+      // -----------------
+
+      // toggleModeBtn.addEventListener('click', () => {
+      //   document.body.classList.toggle('dark-mode');
+      // });
+
+      // ****************
+      // Using Keyboard shortcut
+      // ****************
+
+      let isBoxVisible = false;
+      document.addEventListener('keydown', (e) => {
+        // console.log(e);
+        console.log('Key: ', e.key);
+        console.log('ctrlKey: ', e.ctrlKey);
+        console.log('shiftKey: ', e.shiftKey);
+
+        if (e.ctrlKey && e.shiftKey && e.key == 'Z') {
+          if (!isBoxVisible) {
+            box.style.display = 'flex';
+            document.body.style.backgroundColor = '#24252e';
+          } else {
+            box.style.display = 'none';
+            document.body.style.backgroundColor = 'white';
+          }
+          isBoxVisible = !isBoxVisible;
+        }
+      });
+    </script>
+  </body>
+</html>

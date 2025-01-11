@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        padding: 20px;
+        border: 2px solid;
+        border-radius: 12px;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>This p tag is already present in Box</p>
+    </div>
+
+    <script>
+      const box = document.querySelector('.box');
+
+      console.log(box.children);
+
+      //   document.createElement, it is used to create HTML element
+      let newEle = document.createElement('p');
+      newEle.textContent = 'This is new p tag';
+      newEle.classList.add('some');
+      newEle.id = 'special';
+
+      console.log(newEle);
+      //   console.log(newEle.id);
+      //   console.log(newEle.textContent);
+      //   console.log(newEle.classList);
+
+      //   box.append(newEle);
+
+      let appendEle = document.createElement('div');
+      let prependEle = document.createElement('div');
+      let afterEle = document.createElement('div');
+      let beforeEle = document.createElement('div');
+
+      appendEle.textContent =
+        'This is p tag which is appended (added as the last item) inside box';
+      prependEle.textContent =
+        'This is p tag which prepended (added as the first item) inside box';
+
+      afterEle.textContent =
+        'This is p tag which is added after the box (outside)';
+      beforeEle.textContent =
+        'This is p tag which is added before the box (outside)';
+
+      box.append(appendEle);
+      box.prepend(prependEle);
+
+      box.after(afterEle);
+      box.before(beforeEle);
+    </script>
+  </body>
+</html>
