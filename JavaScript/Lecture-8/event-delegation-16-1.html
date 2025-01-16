@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .parent {
+        padding: 15px;
+        border: 2px solid black;
+        border-radius: 12px;
+
+        display: flex;
+      }
+
+      .child {
+        height: 80px;
+        width: 80px;
+        border-radius: 6px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: teal;
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+      <div class="child">7</div>
+      <div class="child">8</div>
+      <div class="child">9</div>
+      <div class="child">10</div>
+    </div>
+    <!-- event delegation, it is concept where we delegate (to pass our work to someone else) event handling to some any of the parent, it is used to handle dynamic element events  -->
+    <script>
+      const child1Ele = document.querySelector('.child:nth-child(1)');
+      const parentEle = document.querySelector('.parent');
+      //   console.log(child1Ele);
+
+      //   child1Ele.onclick = () => {
+      //     console.log('Child 1 clicked');
+      //   };
+
+      parentEle.onclick = (e) => {
+        // console.log('Parent clicked');
+        // console.log(e);
+        console.log(e.target);
+
+        // template literal, it is used to include variable value as a string
+
+        console.log(`child ${e.target.innerText} clicked`);
+        e.target.style.backgroundColor = 'tomato';
+      };
+    </script>
+  </body>
+</html>
