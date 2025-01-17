@@ -52,31 +52,31 @@
 
       // event propagation / event bubbling, whenever an event happens it will notify all of its parents about that event, this is called event propagation (Applied by default) (Bottom to top)
 
-      //   subChildEle.addEventListener('click', (e) => {
-      //     console.log('subChildEle Clicked');
+      // subChildEle.addEventListener('click', (e) => {
+      //   console.log('subChildEle Clicked');
 
-      //     // event.stopPropagation(), it is used to stop propagation
+      //   // event.stopPropagation(), it is used to stop propagation
 
-      //     // e.stopPropagation();
-      //   });
+      //   // e.stopPropagation();
+      // });
 
-      //   childEle.addEventListener('click', () => {
-      //     console.log('childEle Clicked');
-      //   });
+      // childEle.addEventListener('click', () => {
+      //   console.log('childEle Clicked');
+      // });
 
-      //   parentEle.addEventListener('click', () => {
-      //     console.log('parentEle Clicked');
-      //   });
+      // parentEle.addEventListener('click', () => {
+      //   console.log('parentEle Clicked');
+      // });
 
-      //   document.body.addEventListener('click', () => {
-      //     console.log('Body Clicked');
-      //   });
+      // document.body.addEventListener('click', () => {
+      //   console.log('Body Clicked');
+      // });
 
-      //   htmlELe.addEventListener('click', () => {
-      //     console.log('HTML Clicked');
-      //   });
+      // htmlELe.addEventListener('click', () => {
+      //   console.log('HTML Clicked');
+      // });
 
-      //   event capturing / event trickling, whenever an event happens on any of the parent we may choose to notify all of its parent, then it is called event capturing (Top to Bottom ) (optional, add true as third parameter in addEventListener to enable this)
+      //   event capturing / event trickling, whenever an event happens on any of the parent/descendants we may choose to notify all of its descendants, then it is called event capturing (Top to Bottom ) (optional, add true as third parameter in addEventListener to enable this)
 
       subChildEle.addEventListener(
         'click',

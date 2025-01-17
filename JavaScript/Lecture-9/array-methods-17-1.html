@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let foodItems = [
+        'Pavbhaji',
+        'Manchurian',
+        'Dabeli',
+        'Vadapav',
+        'Bhel',
+        'Dhosa',
+        'Idli',
+        'Menduvada',
+        'Pani puri',
+        'Sev puri',
+        'Dahi puri',
+        'Chatni puri',
+        'Ragdo',
+        'Masala Pav',
+        'Sandwich',
+      ];
+
+      console.log(foodItems);
+      console.log(foodItems[0]);
+      console.log(foodItems[1]);
+
+      console.log(foodItems.length);
+
+      console.log(foodItems[foodItems.length - 1]);
+      console.log(foodItems[foodItems.length - 2]);
+
+      //   push(), add items at the end
+      //   console.log('Before: ', foodItems);
+      //   foodItems.push('Pizza');
+      //   console.log('After: ', foodItems);
+
+      //   pop(), remove last items and returns it
+      //   console.log('Before: ', foodItems);
+      //   console.log(foodItems.pop());
+      //   console.log('After: ', foodItems);
+
+      //   shift(), it is like pop() but it will remove first items and returns it
+      //   console.log('Before: ', foodItems);
+      //   console.log(foodItems.shift());
+      //   console.log('After: ', foodItems);
+
+      //   unshift(), it is like push() but it will push at first item
+      //   console.log('Before: ', foodItems);
+      //   foodItems.unshift('Burger');
+      //   console.log('After: ', foodItems);
+
+      //   join(), it returns a string by joining all array items in single string, we can also pass our custom separator
+
+      //   console.log(foodItems.join());
+      //   console.log(foodItems.join('-'));
+      //   console.log(foodItems.join(', '));
+
+      //   get array after specified index
+      //   console.log(foodItems.slice(5));
+
+      //   get array items between specified range
+      //   console.log(foodItems.slice(2, 6));
+
+      //   get array of starting items till specified index
+      //   console.log(foodItems.slice(0, 5));
+
+      //   get array of last items from specified index
+      //   console.log(foodItems.slice(foodItems.length - 3));
+      //   console.log(foodItems.slice(-3));
+
+      //   console.log(foodItems.slice(foodItems.length - 5, foodItems.length - 2));
+      //   console.log(foodItems.slice(-5, -2));
+
+      // splice(starting_index, delete_count, list_of_items_to_add)
+
+      //   console.log('before: ', foodItems);
+      //   console.log(foodItems.splice(2));
+      //   console.log('After: ', foodItems);
+
+      // deleting items from between array
+
+      //   console.log('before: ', foodItems);
+      //   //   console.log(foodItems.splice(2, 1));
+      //   console.log(foodItems.splice(2, 2));
+      //   console.log('After: ', foodItems);
+
+      // adding items inside array
+
+      //   console.log('before: ', foodItems);
+      //   //   console.log(foodItems.splice(2, 1));
+      //   //   console.log(foodItems.splice(2, 0, 'Ice cream'));
+      //   console.log(foodItems.splice(2, 0, 'Ice cream', 'Uttapam'));
+      //   console.log('After: ', foodItems);
+
+      // replacing items to array
+
+      //   console.log('before: ', foodItems);
+      //   //   console.log(foodItems.splice(2, 1, 'Ice cream'));
+      //   //   console.log(foodItems.splice(2, 2, 'Ice cream', 'Uttapam'));
+      //   console.log(
+      //     foodItems.splice(2, 2, 'Ice cream', 'Uttapam', 'Maggie', 'Pakoda')
+      //   );
+      //   console.log('After: ', foodItems);
+
+      // indexOf(), it returns index of specified item
+      console.log(foodItems.indexOf('Menduvada'));
+
+      //   at(), it returns item stored at specified index
+      //   console.log(foodItems[8]);
+      console.log(foodItems.at(8));
+
+      //   reverse(), it reverses the array
+
+      console.log(foodItems.reverse());
+
+      //   includes(), it returns true if items exits in array, else returns false
+      console.log(foodItems.includes('Idli'));
+      console.log(foodItems.includes('Idliiiii'));
+    </script>
+  </body>
+</html>
