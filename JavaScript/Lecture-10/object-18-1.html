@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //               name   age   city   course  education
+      personDetails_1 = ['Jay', 23, 'Rajkot', 'WD', 'BCA'];
+      personDetails_2 = ['AJay', 26, 'Baroda', 'SE', 'BA'];
+
+      personDetails_1.unshift('Gujrat');
+
+      console.log(personDetails_1);
+      console.log('Name: ', personDetails_1[0]);
+      console.log('Education: ', personDetails_1[4]);
+
+      // object, it is collection of key-value pairs
+      //   - Here key should be unique
+
+      let num = 10;
+
+      personDetails = {
+        age: 23,
+        city: 'Rajkot',
+        course: 'WD',
+        education: 'BCA',
+        name: 'Jay',
+      };
+
+      console.log(personDetails);
+
+      // DOt (.) notation
+      console.log(personDetails.name);
+
+      //   bracket ["key_name"] notation
+      console.log(personDetails['name']);
+
+      function printHello() {
+        console.log('Hello from function');
+      }
+
+      obj = {
+        character: 'a',
+        string: 'something',
+        number_int: 123,
+        number_float: 10.12,
+        variable: num,
+        boolean: true,
+        array_variable: personDetails_1,
+        array: ['Jay', 23, 'Rajkot', 'WD', 'BCA'],
+        obj_variable: personDetails,
+        object: {
+          age: 45,
+          city: 'Rajkot',
+        },
+        function_name: printHello,
+        function_definition: () => {
+          console.log('Hello from function definition');
+        },
+      };
+
+      console.log(obj);
+      console.log(obj.variable);
+      console.log(obj.array);
+      console.log(obj.array[2]);
+      console.log(obj.boolean);
+      console.log(obj.obj_variable.name);
+      console.log(obj.function_name);
+      console.log(obj.function_definition);
+      console.log(obj.function_definition());
+
+      //   Object methods
+
+      //   returns array of keys
+      console.log(Object.keys(obj));
+
+      //   returns array of values
+      console.log(Object.values(obj));
+
+      //   returns array of entries (key-value pairs as a separate array)
+      console.log(Object.entries(obj));
+
+      console.log(console);
+      console.error('This is some error');
+      console.info('This is some info');
+      console.warn('This is some warning');
+
+      console.table(obj);
+      console.table(personDetails_1);
+      console.assert(10 > 20, 'Condition is false');
+
+      arr = [1, 2, 3, 4, 5];
+
+      console.log(arr);
+
+      console.log(arr.length);
+
+      let person = {
+        play: () => {
+          console.log('Playing');
+        },
+        eat: () => {
+          console.log('Eating');
+        },
+        phone: '000000',
+      };
+
+      let obj1 = {
+        name: 'Jay',
+        age: 23,
+      };
+
+      obj1.__proto__ = person;
+
+      console.__proto__ = person;
+
+      console.log(obj1.name);
+      console.log(obj1.phone);
+      obj1.eat();
+
+      console.eat();
+
+      console.log(console);
+    </script>
+  </body>
+</html>
