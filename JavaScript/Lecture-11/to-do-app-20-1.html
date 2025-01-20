@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .to-do-app {
+        max-width: 450px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(173, 216, 230, 0.253);
+        border-radius: 12px;
+      }
+
+      .header {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: rgba(173, 216, 230, 0.362);
+        border-radius: 8px;
+      }
+      .header input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+
+      .header button {
+        padding: 3px 10px;
+        background-color: rgba(45, 45, 240, 0.536);
+        color: white;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+      }
+
+      .header button:active {
+        scale: 0.97;
+      }
+
+      .tasks {
+        margin-top: 20px;
+        background-color: rgba(91, 197, 191, 0.382);
+        padding: 10px;
+      }
+
+      .task {
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 5px;
+        border-radius: 6px;
+        background-color: rgba(112, 128, 144, 0.677);
+        color: white;
+
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      .task i {
+        color: rgb(250, 37, 0);
+        margin-left: auto;
+        cursor: pointer;
+      }
+
+      .task .check:checked + span {
+        text-decoration: line-through;
+        text-decoration-color: tomato;
+        text-decoration-thickness: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="to-do-app">
+      <div class="header">
+        <input type="text" name="" id="inp" placeholder="Enter your task" />
+        <button>Add task</button>
+      </div>
+      <ul class="tasks">
+        <!-- <li class="task">
+          <input type="checkbox" name="" id="" class="check" />
+          <span>something</span>
+          <i class="bi bi-trash3-fill"></i>
+        </li> -->
+      </ul>
+    </div>
+
+    <script>
+      const input = document.querySelector('#inp');
+      const btn = document.querySelector('button');
+
+      const tasks = document.querySelector('.tasks');
+
+      btn.onclick = () => {
+        newTask = document.createElement('li');
+        newTask.className = 'task';
+        newTask.innerHTML = `<input type="checkbox" name="" id="" class="check" />
+          <span>${input.value}</span>
+          <i class="bi bi-trash3-fill" onclick="deleteTask(this)" ></i>
+        `;
+
+        // console.log(newTask);
+        input.value = '';
+        tasks.append(newTask);
+      };
+
+      function deleteTask(element) {
+        element.parentElement.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

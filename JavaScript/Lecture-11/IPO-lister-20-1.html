@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10">
+    <button
+      class="px-2 py-1 rounded bg-blue-400 active:bg-blue-500 active:scale-95"
+    >
+      Load IPO data
+    </button>
+    <!-- <div class="ipo-card w-fit py-4 px-8 bg-slate-300 rounded-md relative">
+      <h2 class="text-3xl font-semibold">Om</h2>
+      <h4>
+        <span class="text-xl mr-4">Share value:</span> <span>1600cr</span>
+      </h4>
+      <h4><span class="text-xl mr-4">Share count:</span><span>1000</span></h4>
+      <h4><span class="text-xl mr-4">Share price:</span><span>200</span></h4>
+      <h5
+        class="py-0.5 px-1 w-fit rounded-xl bg-slate-200 text-sm absolute top-1 right-1"
+      >
+        25-1-2025
+      </h5>
+    </div> -->
+
+    <div class="ipo-list flex gap-3 flex-wrap"></div>
+    <script>
+      // IPOData = [
+      //   {
+      //     name: 'Kishan Industries',
+      //     value: '1200cr',
+      //     shareCount: 12000,
+      //     sharePrice: 100,
+      //     date: '25-1-2025',
+      //   },
+      //   {
+      //     name: 'Power Industries',
+      //     value: '1400cr',
+      //     shareCount: 16000,
+      //     sharePrice: 150,
+      //     date: '12-2-2025',
+      //   },
+      //   {
+      //     name: 'Om Industries',
+      //     value: '100cr',
+      //     shareCount: 1000,
+      //     sharePrice: 500,
+      //     date: '25-3-2025',
+      //   },
+      //   {
+      //     name: 'Xyz Industries',
+      //     value: '1800cr',
+      //     shareCount: 32000,
+      //     sharePrice: 100,
+      //     date: '17-4-2025',
+      //   },
+      //   {
+      //     name: 'Abc Industries',
+      //     value: '2400cr',
+      //     shareCount: 58000,
+      //     sharePrice: 300,
+      //     date: '8-6-2025',
+      //   },
+      //   {
+      //     name: 'PQR Industries',
+      //     value: '2100cr',
+      //     shareCount: 50000,
+      //     sharePrice: 350,
+      //     date: '10-7-2025',
+      //   },
+      // ];
+
+      let IPOData = [];
+
+      async function getData() {
+        try {
+          const response = await fetch(
+            //   'https://financialmodelingprep.com/api/v3/search?query=AA&apikey=l2rSBGZO2heqmduZDQMlajPsWnGMaq26'
+            'https://financialmodelingprep.com/api/v3/stock/list?apikey=l2rSBGZO2heqmduZDQMlajPsWnGMaq26'
+          );
+          if (response.ok) {
+            const result = await response.json();
+
+            console.log(result);
+
+            IPOData = result.slice(0, 100);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      getData();
+
+      document.querySelector('button').addEventListener('click', () => {
+        IPOData.forEach((ipo) => {
+          const newIPOCard = document.createElement('div');
+          newIPOCard.className =
+            'ipo-card w-fit py-4 px-8 bg-slate-300 rounded-md relative';
+
+          newIPOCard.innerHTML = `   <h2 class="text-3xl font-semibold">${ipo.name}</h2>
+      <h4>
+        <span class="text-xl mr-4">Stock symbol:</span> <span>${ipo.symbol}</span>
+      </h4>
+      <h4><span class="text-xl mr-4">Exchange Name:</span><span>${ipo.exchange}</span></h4>
+      <h4><span class="text-xl mr-4">Share price:</span><span>${ipo.price}</span></h4>
+       <h5
+         class="py-0.5 px-1 w-fit rounded-xl bg-slate-200 text-sm absolute top-1 right-1"
+       >
+     ${ipo.exchangeShortName}
+    </h5>`;
+          document.querySelector('.ipo-list').append(newIPOCard);
+        });
+      });
+    </script>
+  </body>
+</html>
