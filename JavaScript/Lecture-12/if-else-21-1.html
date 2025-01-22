@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log('1');
+      console.log('2');
+      if (5 > 10) {
+        console.log('3');
+      }
+      console.log('4');
+      console.log('5');
+      // -------------
+      // if, it useful when we want to execute specific block of code only when some condition is true
+      // -------------
+      // syntax
+
+      // if (condition) {
+      //   // code, this code will run only if specified condition is true
+      // }
+
+      day = 'Sunday';
+
+      if (day == 'Sunday') {
+        console.log('Holiday');
+      }
+
+      // -------------
+      // if...else, it is used to define what to do when condition is true and when condition is false
+      // -------------
+
+      // let num = 10;
+      // if (num >= 18) {
+      //   console.log('You are eligible to get Driving License');
+      // } else {
+      //   console.log('You are NOT eligible to get Driving License');
+      // }
+
+      // To check multiple condition in if
+      // -------------
+
+      // let num = 20;
+      // let nationality = 'USA';
+
+      // if (num >= 18 && nationality == 'Indian') {
+      //   console.log('You are eligible to get Driving License');
+      // } else {
+      //   console.log('You are NOT eligible to get Driving License');
+      // }
+
+      // let num = 20;
+      // let nationality = 'Indian';
+
+      // -------------
+      // Nested if-else, it is used when we want to check use if-else inside another if-else
+      // -------------
+
+      // syntax
+
+      // if (condition_1) {
+      //   if (condition_2) {
+      //     // code, this will run only if condition_1 as well as  condition_2 is true
+      //   } else {
+      //     // code, this will only if condition_1 is false but condition_2 is true
+      //   }
+      // } else {
+      //   // code, this will run only if condition_1 is false
+      // }
+
+      // if (num >= 18) {
+      //   if (nationality == 'Indian') {
+      //     console.log('You are eligible to get Driving License');
+      //   } else {
+      //     console.log(
+      //       'You are eligible to get Driving Permit if you pass special test'
+      //     );
+      //   }
+      // } else {
+      //   console.log('You are NOT eligible to get Driving License');
+      // }
+
+      // else if ladder, it is used when we want to check multiple conditions, note that it can unrelated conditions
+
+      // syntax
+
+      // if (condition_1) {
+      //   // code, this will only if condition_1 is true
+      // } else if (condition_2) {
+      //   // code, this will only if all above conditions are false and condition_2 is true
+      // } else if (condition_3) {
+      //   // code, this will only if all above conditions are false and condition_3 is true
+      // } else if (condition_4) {
+      //   // code, this will only if all above conditions are false and condition_4 is true
+      // } else {
+      //   // code, this will only if all above conditions are false
+      // }
+
+      // day = '132';
+
+      // if (day == 'sun') {
+      //   console.log('Sunday');
+      // } else if (day == 'mon') {
+      //   console.log('Monday');
+      // } else if (day == 'tue') {
+      //   console.log('Tuesday');
+      // } else if (day == 'wed') {
+      //   console.log('Wednesday');
+      // } else if (day == 'thu') {
+      //   console.log('Thursday');
+      //   // } else if (day == 'fri') {
+      // } else if (5 < 10) {
+      //   // console.log('Friday');
+      //   console.log('5 is LT 10');
+      // } else if (day == 'sat') {
+      //   console.log('Saturday');
+      // } else {
+      //   console.log('Wrong input');
+      // }
+
+      // switch, it is used to run specific code on specific case when key is aready known
+
+      day = '351';
+
+      // syntax
+
+      // switch (key) {
+      //   case 1:
+      //     // code, this will run only if all above case 1 is true
+      //     break;
+      //   case 2:
+      //     // code, this will run only if all above case 2 is true
+      //     break;
+      //   case 3:
+      //     // code, this will run only if all above case 3 is true
+      //     break;
+      //   case 4:
+      //     // code, this will run only if all above case 4 is true
+      //     break;
+      //   default:
+      //   // code, this will run only if all above cases are false
+      // }
+
+      switch (day) {
+        case 'sun':
+          console.log('Sunday');
+          break;
+        case 'mon':
+          console.log('Monday');
+          break;
+        case 'tue':
+          console.log('Tuesday');
+          break;
+        case 'wed':
+          console.log('Wednesday');
+          break;
+        case 'thu':
+          console.log('Thursday');
+          break;
+        case 'fri':
+          console.log('Friday');
+          break;
+        case 'sat':
+          console.log('Saturday');
+          break;
+        default:
+          console.log('Wrong Input');
+      }
+    </script>
+  </body>
+</html>

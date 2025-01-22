@@ -97,12 +97,13 @@
     </div>
 
     <script>
-      const input = document.querySelector('#inp');
-      const btn = document.querySelector('button');
+      const input = document.getElementById('inp');
+      const btn = document.getElementsByTagName('button');
 
       const tasks = document.querySelector('.tasks');
+      console.log(btn[0]);
 
-      btn.onclick = () => {
+      btn[0].onclick = () => {
         newTask = document.createElement('li');
         newTask.className = 'task';
         newTask.innerHTML = `<input type="checkbox" name="" id="" class="check" />
