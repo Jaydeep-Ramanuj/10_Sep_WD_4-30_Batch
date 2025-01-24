@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // A
+      // AB
+      // ABC
+      // ABCD
+      // ABCDE
+
+      //   let str = '';
+
+      //   for (let i = 0; i < 5; i++) {
+      //     for (let j = 0; j <= i; j++) {
+      //       str += String.fromCharCode(j + 65);
+      //     }
+      //     str += '\n';
+      //   }
+      //   console.log(str);
+
+      // ------------
+
+      // A
+      // BB
+      // CCC
+      // DDDD
+      // EEEEE
+
+      //   let str = '';
+
+      //   for (let i = 0; i < 5; i++) {
+      //     for (let j = 0; j <= i; j++) {
+      //       str += String.fromCharCode(i + 65);
+      //     }
+      //     str += '\n';
+      //   }
+      //   console.log(str);
+
+      // ------------
+
+      // A
+      // BC
+      // DEF
+      // GHIJ
+      // KLMNO
+
+      let str = '';
+      let counter = 65;
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+          str += String.fromCharCode(counter) + ' ';
+          counter++;
+        }
+        str += '\n';
+      }
+      console.log(str);
+    </script>
+  </body>
+</html>

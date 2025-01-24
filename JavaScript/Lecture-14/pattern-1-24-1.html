@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   *
+      console.log('*');
+      // ---------
+
+      //   *****
+
+      //   let str = '';
+      //   for (let i = 0; i < 5; i++) {
+      //     str = str + '*';
+      //   }
+      //   console.log(str);
+
+      //   *****
+      //   *****
+      //   *****
+      //   *****
+      //   *****
+
+      let str = '';
+      //   outer loop defines how many times inner loop will work / it  defines how many row gets printed /
+      for (let j = 0; j < 5; j++) {
+        // inner loop defines how many start gets printed / it defines how many times a column gets printed
+        for (let i = 0; i < 5; i++) {
+          str = str + '*';
+        }
+        str = str + '\n';
+      }
+      console.log(str);
+    </script>
+  </body>
+</html>
