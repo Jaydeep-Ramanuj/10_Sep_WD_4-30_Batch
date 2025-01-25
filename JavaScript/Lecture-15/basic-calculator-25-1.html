@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name=""
+      id="num1"
+      placeholder="Enter first number"
+    /><br />
+    <input
+      type="text"
+      name=""
+      id="num2"
+      placeholder="Enter second number"
+    /><br />
+    <input
+      type="text"
+      name=""
+      id="result"
+      placeholder="Result will be shown here"
+      readonly
+      disabled
+    />
+    <br />
+    <!-- <button id="sum" onclick="sum()">+</button>
+    <button id="sub" onclick="sub()">-</button>
+    <button id="mul" onclick="mul()">*</button>
+    <button id="div" onclick="div()">/</button>
+    <button id="mod" onclick="mod()">%</button>
+    <button onclick="clearInputs()">Clear</button> -->
+
+    <!-- <button id="sum" onclick="calculator('+')">+</button>
+    <button id="sub" onclick="calculator('-')">-</button>
+    <button id="mul" onclick="calculator('*')">*</button>
+    <button id="div" onclick="calculator('/')">/</button>
+    <button id="mod" onclick="calculator('%')">%</button>
+    <button onclick="calculator('c  ')">Clear</button> -->
+
+    <button id="sum" onclick="usingEval('+')">+</button>
+    <button id="sub" onclick="usingEval('-')">-</button>
+    <button id="mul" onclick="usingEval('*')">*</button>
+    <button id="div" onclick="usingEval('/')">/</button>
+    <button id="mod" onclick="usingEval('%')">%</button>
+    <button onclick="usingEval('c')">Clear</button>
+
+    <script>
+      let num1 = document.querySelector('#num1');
+      let num2 = document.querySelector('#num2');
+      let result = document.querySelector('#result');
+      let sumBtn = document.querySelector('#sum');
+
+      //   sumBtn.addEventListener('click', () => {
+      //     result.value = Number(num1.value) + parseInt(num2.value);
+      //   });
+
+      //   sumBtn.addEventListener('click', () => {
+      //     sum();
+      //   });
+
+      //   sumBtn.addEventListener('click', sum);
+
+      // Using different functions
+      // ---------------
+
+      //   function sum() {
+      //     result.value = Number(num1.value) + parseInt(num2.value);
+      //   }
+      //   function sub() {
+      //     result.value = Number(num1.value) - parseInt(num2.value);
+      //   }
+      //   function mul() {
+      //     result.value = Number(num1.value) * parseInt(num2.value);
+      //   }
+      //   function div() {
+      //     result.value = Number(num1.value) / parseInt(num2.value);
+      //   }
+      //   function mod() {
+      //     result.value = Number(num1.value) % parseInt(num2.value);
+      //   }
+
+      //   function clearInputs() {
+      //     num1.value = '';
+      //     num2.value = '';
+      //     result.value = '';
+      //   }
+
+      // Using same functions
+      // ---------------
+
+      function calculator(operation) {
+        switch (operation) {
+          case '+':
+            result.value = Number(num1.value) + parseInt(num2.value);
+            break;
+          case '-':
+            result.value = Number(num1.value) - parseInt(num2.value);
+            break;
+          case '*':
+            result.value = Number(num1.value) * parseInt(num2.value);
+            break;
+          case '/':
+            result.value = Number(num1.value) / parseInt(num2.value);
+            break;
+          case '%':
+            result.value = Number(num1.value) % parseInt(num2.value);
+            break;
+          case 'c':
+            num1.value = '';
+            num2.value = '';
+            result.value = '';
+            break;
+        }
+      }
+
+      function usingEval(operation) {
+        if (operation == 'c') {
+          num1.value = '';
+          num2.value = '';
+          result.value = '';
+        } else {
+          result.value = eval(`${num1.value}${operation}${num2.value}`);
+        }
+      }
+    </script>
+  </body>
+</html>

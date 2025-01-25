@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function, it is used to perform specific task which can be use as many time as possible, we can also modify function by passing some parameters
+
+      // function types
+      //   1. built-in functions, these functions are already present in Js, we just have use it
+      //   2. Use Define Function, these are function which we define
+
+      //   function definition
+
+      // function function_name(parameters_1, parameters_2,...){
+      //     code, this logic will run whenever we call this function
+      //     we can use any parameters to modify function values
+      //     we can also return values from function
+
+      //     return some_value;
+      // }
+
+      // function call
+
+      // function_name(argument_1, argument_2...)
+
+      function greet() {
+        console.log('Namaste JavaScript');
+      }
+
+      greet();
+
+      function greetWithName(name = 'Bhavesh') {
+        console.log('Hello,', name);
+      }
+
+      greetWithName();
+      greetWithName('Maulik');
+
+      function applyLogic(num1, num2) {
+        let sum = num1 + num2;
+        console.log(sum);
+      }
+
+      applyLogic(5, 45);
+      applyLogic(2, 8, 36); // it will ignore 36 as there is no parameter for it
+
+      function FahrenheitToCelsius(fVal) {
+        // (32°F − 32) × 5/9 = 0°C
+
+        let celsius = ((fVal - 32) * 5) / 9;
+        console.log(celsius);
+        return celsius;
+      }
+
+      let temperature = FahrenheitToCelsius(50);
+
+      console.log('Current temperature is : ', temperature);
+
+      // Anonymous function, these are function but without name,
+      // they can be used to pass function to some variables, ie. function expression
+      // they can used where we can just call it from a specific scenario ie. like how we use it in addEventListener
+
+      // function expression
+
+      //   let multiplication = function multiply(n1, n2) {
+      //     return n1 * n2;
+      //   };
+
+      //   anonymous function with name but as function expression
+      let multiplication = function (n1, n2) {
+        return n1 * n2;
+      };
+
+      //   console.log(multiply(2, 12));
+      console.log(multiplication(2, 12));
+
+      //   arrow function
+      let division = (n1, n2) => {
+        return n1 / n2;
+      };
+
+      console.log(division(10, 2));
+
+      //   addEventListener('click', () => {});
+
+      // IIFE, Immediately Invoked function expression, it can be used when we want to execute something asd soon as it is defines
+
+      ((name) => {
+        console.log('Hello', name);
+      })('Sanjay');
+    </script>
+  </body>
+</html>
