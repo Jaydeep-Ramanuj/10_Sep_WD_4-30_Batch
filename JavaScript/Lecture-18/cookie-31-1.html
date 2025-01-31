@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.cookie = 'age=30';
+      document.cookie = 'city=rajkot';
+
+      let cookieString = document.cookie;
+
+      console.log(cookieString);
+
+      let cookiesData = cookieString.split('; ');
+
+      console.log(cookiesData);
+
+      let nameData = cookiesData[2];
+      console.log(nameData);
+
+      let name = nameData.split('=')[1];
+
+      console.log(name);
+
+      //   ----------------------------
+
+      let person = {
+        name: 'Ajay',
+        age: 20,
+        city: 'rajkot',
+        marks: 98,
+        course: 'WD',
+      };
+
+      let personObjString = JSON.stringify(person);
+      console.log(personObjString);
+      document.cookie = `data= ${personObjString}`;
+
+      function setCookie(name, obj) {
+        objString = JSON.stringify(obj);
+        document.cookie = `${name}=${objString}`;
+      }
+
+      function getCookie(name) {
+        let cookie = document.cookie;
+        // console.log(cookie);
+
+        let cookieNamesList = getCookieNames(cookie);
+        // console.log(cookieNamesList);
+
+        let resultCookie;
+        cookieNamesList.forEach((c) => {
+          if (c == name) {
+            let indexOfCookie = cookie.indexOf(c) + c.length + 1;
+            // console.log(indexOfCookie);
+
+            resultCookie = cookie.substring(
+              indexOfCookie,
+              cookie.indexOf(';', indexOfCookie)
+            );
+          }
+        });
+
+        let cookieObj = JSON.parse(resultCookie);
+        return cookieObj;
+      }
+
+      //   setCookie('dog', { name: 'Moti', age: 5, breed: 'pug' });
+
+      console.log(getCookie('data'));
+
+      function getCookieNames(cookie) {
+        let cookieList = cookie.split('; ');
+        let cookieNameList = [];
+        cookieList.forEach((cookie) => {
+          cookieNameList.push(cookie.split('=')[0]);
+        });
+        return cookieNameList;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let foodItems = [
+        'Pavbhaji',
+        'Manchurian',
+        'Dabeli',
+        'Vadapav',
+        'Bhel',
+        'Dhosa',
+        'Idli',
+        'Menduvada',
+        'Pani puri',
+        'Sev puri',
+        'Dahi puri',
+        'Chatni purii',
+        'Ragdo',
+        'Masala Pav',
+        'Sandwich',
+      ];
+
+      let days = {
+        sun: 'Sunday',
+        mon: 'Monday',
+        tue: 'Tuesday',
+        wed: 'Wednesday',
+        thu: 'Thursday',
+        fri: 'Friday',
+        sat: 'Saturday',
+      };
+
+      //   for (let i = 0; i < foodItems.length; i++) {
+      //     console.log(foodItems[i]);
+      //   }
+
+      //   for (item of foodItems) {
+      //     console.log(item);
+      //   }
+
+      //   for (item in foodItems) {
+      //     console.log(foodItems[item]);
+      //   }
+
+      //   for (day in days) {
+      //     console.log(day);
+      //   }
+
+      foodItems.forEach((item) => console.log(item + '---'));
+
+      // map
+      // filter
+      // reduce
+      // some
+      // every
+
+      let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      console.log(nums.map((num) => num * num));
+
+      console.log(nums.filter((num) => num % 2 == 0));
+
+      console.log(nums.reduce((num, total) => (total += num)));
+
+      console.log(foodItems.every((item) => item.length < 15));
+
+      console.log(foodItems.some((item) => item.length > 11));
+    </script>
+  </body>
+</html>
