@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rings,
+      .rings > .ring {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 2px solid #24252e;
+      }
+
+      .rings {
+        position: relative;
+        transition: all 600ms;
+      }
+      .rings > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .rings .ring:nth-child(1) {
+        height: 75px;
+        width: 75px;
+
+        transition: all 500ms;
+      }
+      .rings .ring:nth-child(2) {
+        height: 50px;
+        width: 50px;
+        transition: all 400ms;
+      }
+      .rings .ring:nth-child(3) {
+        height: 25px;
+        width: 25px;
+        transition: all 400ms;
+      }
+      .dot {
+        height: 8px;
+        width: 8px;
+        background-color: #24252e;
+        border-radius: 50%;
+        transition: all 200ms;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rings">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="dot"></div>
+    </div>
+
+    <button>Start</button>
+
+    <script>
+      // const rings = document.querySelector('.rings');
+      // const ringsElements = document.querySelectorAll('.rings *');
+      const allEle = document.querySelectorAll('div');
+      // console.log(allEle);
+      document.querySelector('button').addEventListener('click', () => {
+        let isThrottled = false;
+
+        function throttle(callback) {
+          if (!isThrottled) {
+            isThrottled = true;
+            requestAnimationFrame(() => {
+              callback();
+              isThrottled = false;
+            });
+          }
+        }
+
+        window.addEventListener('mousemove', (e) => {
+          Array.from(allEle).forEach((ele) => {
+            console.log(ele);
+
+            throttle(() => {
+              // console.log(
+              //   `translate(${e.pageX - ele.clientWidth / 2}px, ${
+              //     e.pageY - ele.clientHeight / 2
+              //   }px)`
+              // );
+
+              ele.style.transform = `translate(${
+                e.pageX - ele.clientWidth / 2
+              }px, ${e.pageY - ele.clientHeight / 2}px)`;
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(window.screen);
+
+      console.log('availHeight: ', window.screen.availHeight);
+      console.log('height: ', window.screen.height);
+
+      console.log('innerHeight: ', window.innerHeight);
+
+      console.log('availWidth: ', window.screen.availWidth);
+      console.log('width: ', window.screen.width);
+
+      console.log('innerWidth: ', window.innerWidth);
+
+      window.addEventListener('resize', (e) => {
+        // console.log('window resized');
+        if (window.innerWidth < 600) {
+          document.body.style.backgroundColor = '#24252e';
+        } else {
+          document.body.style.backgroundColor = 'initial';
+        }
+      });
+    </script>
+  </body>
+</html>
