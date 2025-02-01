@@ -5,56 +5,69 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .rings,
-      .rings > .ring {
+      /* .wrapper {
+        position: relative;
+      } */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+        overflow: hidden;
+        background-color: #24252e;
+      }
+      .wrapper * {
+        --ring-1-color: rgb(239, 71, 111, 0.2);
+        --ring-2-color: rgb(255, 209, 102, 0.2);
+        --ring-3-color: rgb(6, 214, 160, 0.2);
+        --ring-4-color: rgb(17, 138, 178, 0.2);
+        --dot-color: rgb(7, 59, 76, 0.2);
+
         height: 100px;
         width: 100px;
         border-radius: 50%;
-        border: 2px solid #24252e;
-      }
-
-      .rings {
-        position: relative;
-        transition: all 600ms;
-      }
-      .rings > * {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: all var(--d) linear;
+        border: 3px solid var(--color);
+        box-shadow: 0 0 30px 0px var(--color);
       }
 
-      .rings .ring:nth-child(1) {
+      .wrapper .ring:nth-child(1) {
+        height: 100px;
+        width: 100px;
+      }
+      .wrapper .ring:nth-child(2) {
         height: 75px;
         width: 75px;
-
-        transition: all 500ms;
       }
-      .rings .ring:nth-child(2) {
+      .wrapper .ring:nth-child(3) {
         height: 50px;
         width: 50px;
-        transition: all 400ms;
       }
-      .rings .ring:nth-child(3) {
+      .wrapper .ring:nth-child(4) {
         height: 25px;
         width: 25px;
-        transition: all 400ms;
       }
-      .dot {
+      .wrapper .dot {
         height: 8px;
         width: 8px;
-        background-color: #24252e;
-        border-radius: 50%;
-        transition: all 200ms;
+        /* background-color: var(--color); */
+        /* border-radius: 50%; */
       }
     </style>
   </head>
   <body>
-    <div class="rings">
-      <div class="ring"></div>
-      <div class="ring"></div>
-      <div class="ring"></div>
-      <div class="dot"></div>
+    <div class="wrapper">
+      <div class="ring" style="--color: #ef476f; --d: 500ms"></div>
+      <div class="ring" style="--color: #ffd166; --d: 400ms"></div>
+      <div class="ring" style="--color: #06d6a0; --d: 300ms"></div>
+      <div class="ring" style="--color: #118ab2; --d: 200ms"></div>
+      <div class="dot" style="--color: #073b4c; --d: 100ms"></div>
     </div>
 
     <button>Start</button>
@@ -62,7 +75,7 @@
     <script>
       // const rings = document.querySelector('.rings');
       // const ringsElements = document.querySelectorAll('.rings *');
-      const allEle = document.querySelectorAll('div');
+      const allEle = document.querySelectorAll('.wrapper *');
       // console.log(allEle);
       document.querySelector('button').addEventListener('click', () => {
         let isThrottled = false;
@@ -76,23 +89,62 @@
             });
           }
         }
+        // console.log(allEle);
 
         window.addEventListener('mousemove', (e) => {
-          Array.from(allEle).forEach((ele) => {
-            console.log(ele);
+          throttle(() => {
+            // console.log(
+            //   `translate(${e.pageX - ele.clientWidth / 2}px, ${
+            //     e.pageY - ele.clientHeight / 2
+            //   }px)`
+            // );
 
-            throttle(() => {
-              // console.log(
-              //   `translate(${e.pageX - ele.clientWidth / 2}px, ${
-              //     e.pageY - ele.clientHeight / 2
-              //   }px)`
-              // );
+            // allEle[0].style.transform = `translate(${
+            //   e.pageX - allEle[0].clientWidth / 2
+            // }px, ${e.pageY - allEle[0].clientHeight / 2}px)`;
 
-              ele.style.transform = `translate(${
-                e.pageX - ele.clientWidth / 2
-              }px, ${e.pageY - ele.clientHeight / 2}px)`;
+            // allEle[1].style.transform = `translate(${
+            //   e.pageX - allEle[1].clientWidth / 2
+            // }px, ${e.pageY - allEle[1].clientHeight / 2}px)`;
+
+            // allEle[2].style.transform = `translate(${
+            //   e.pageX - allEle[2].clientWidth / 2
+            // }px, ${e.pageY - allEle[2].clientHeight / 2}px)`;
+
+            // allEle[3].style.transform = `translate(${
+            //   e.pageX - allEle[3].clientWidth / 2
+            // }px, ${e.pageY - allEle[3].clientHeight / 2}px)`;
+
+            // allEle[4].style.transform = `translate(${
+            //   e.pageX - allEle[4].clientWidth / 2
+            // }px, ${e.pageY - allEle[4].clientHeight / 2}px)`;
+
+            Array.from(allEle).forEach((ele) => {
+              // ele.style.top = e.pageY - ele.clientHeight / 2 + 'px';
+              // ele.style.left = e.pageX - ele.clientWidth / 2 + 'px';
+              ele.style.top = e.pageY + 'px';
+              ele.style.left = e.pageX + 'px';
             });
+
+            // allEle[0].style.top = e.pageY - allEle[0].clientHeight / 2 + 'px';
+            // allEle[0].style.left = e.pageX - allEle[0].clientHeight / 2 + 'px';
+
+            // allEle[1].style.top = e.pageY - allEle[1].clientHeight / 2 + 'px';
+            // allEle[1].style.left = e.pageX - allEle[1].clientHeight / 2 + 'px';
+
+            // allEle[2].style.top = e.pageY - allEle[2].clientHeight / 2 + 'px';
+            // allEle[2].style.left = e.pageX - allEle[2].clientHeight / 2 + 'px';
+
+            // allEle[3].style.top = e.pageY - allEle[3].clientHeight / 2 + 'px';
+            // allEle[3].style.left = e.pageX - allEle[3].clientHeight / 2 + 'px';
+
+            // allEle[4].style.top = e.pageY - allEle[4].clientHeight / 2 + 'px';
+            // allEle[4].style.left = e.pageX - allEle[4].clientHeight / 2 + 'px';
           });
+          // Array.from(allEle).forEach((ele) => {
+          //   // console.log(ele);
+
+          // });
         });
       });
     </script>
